@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.4),
-    on April 13, 2023, at 10:50
+    on April 13, 2023, at 11:10
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -139,13 +139,29 @@ img_training = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=0.0)
-judgement = visual.TextStim(win=win, name='judgement',
+judgement1 = visual.TextStim(win=win, name='judgement1',
     text=None,
     font='Open Sans',
     pos=(0.6, -0.6), height=0.05, wrapWidth=None, ori=0.0, 
     color=[-0.4667, -0.4667, -0.4667], colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-1.0);
+judgement = visual.TextBox2(
+     win, text=None, font='Open Sans',
+     pos=(0, -0.9),units='norm',     letterHeight=0.05,
+     size=(0.15, 0.1), borderWidth=1.0,
+     color='white', colorSpace='rgb',
+     opacity=None,
+     bold=False, italic=False,
+     lineSpacing=1.0,
+     padding=0.0, alignment='center',
+     anchor='center',
+     fillColor=[0.0039, 0.0039, 0.0039], borderColor=[-0.3020, -0.3020, -0.3020],
+     flipHoriz=False, flipVert=False, languageStyle='LTR',
+     editable=False,
+     name='judgement',
+     autoLog=True,
+)
 
 # --- Initialize components for Routine "trial" ---
 
@@ -415,8 +431,9 @@ for thisTrials_training in trials_training:
     modify = False
     judgement.text = ''
     event.clearEvents('keyboard')
+    judgement.reset()
     # keep track of which components have finished
-    trainingComponents = [img_training, judgement]
+    trainingComponents = [img_training, judgement1, judgement]
     for thisComponent in trainingComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -449,6 +466,26 @@ for thisTrials_training in trials_training:
             thisExp.timestampOnFlip(win, 'img_training.started')
             img_training.setAutoDraw(True)
         
+        # *judgement1* updates
+        if judgement1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            judgement1.frameNStart = frameN  # exact frame index
+            judgement1.tStart = t  # local t and not account for scr refresh
+            judgement1.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(judgement1, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'judgement1.started')
+            judgement1.setAutoDraw(True)
+        # Run 'Each Frame' code from code
+        keys = event.getKeys()
+        if len(keys):
+            if 'backspace' in keys:
+                judgement.text = judgement.text[:-1]
+            elif 'return' in keys:
+                continueRoutine = False
+            else:
+                judgement.text = judgement.text + keys[0]
+        
         # *judgement* updates
         if judgement.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
@@ -459,15 +496,6 @@ for thisTrials_training in trials_training:
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'judgement.started')
             judgement.setAutoDraw(True)
-        # Run 'Each Frame' code from code
-        keys = event.getKeys()
-        if len(keys):
-            if 'backspace' in keys:
-                judgement.text = judgement.text[:-1]
-            elif 'return' in keys:
-                continueRoutine = False
-            else:
-                judgement.text = judgement.text + keys[0]
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
