@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.4),
-    on April 26, 2023, at 18:55
+    on April 26, 2023, at 19:57
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -35,7 +35,7 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '2022.2.4'
-expName = 'GazeEst'  # from the Builder filename that created this script
+expName = 'GazeEst_Wip'  # from the Builder filename that created this script
 expInfo = {
     'participant': f"{randint(0, 999999):06.0f}",
     'gender': ["m", "w", "d"],
@@ -55,7 +55,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\GazeEst_lastrun.py',
+    originPath='C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\GazeEst_Wip_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -97,20 +97,29 @@ eyetracker = None
 defaultKeyboard = keyboard.Keyboard(backend='iohub')
 
 # --- Initialize components for Routine "instructions_start" ---
+# Run 'Begin Experiment' code from code
+# duration of instruction (start)
+d_inst_start = 1
+
+# duration of instruction (training)
+d_inst_train = 1
+
+# duration of instruction (exp)
+d_inst_exp = 1
 inst_exp = visual.TextStim(win=win, name='inst_exp',
     text='Herzlich Willkommen.\n\nIn dieser Studie untersuchen wir, wie wir die Blicke anderer Personen wahrnehmen.\n\nDazu werden Ihnen im Folgenden die Fotos verschiedener Personen gezeigt. Ihre Aufgabe besteht darin, die Blickrichtung der gerade auf dem Bildschirm präsentierten Person einzuschätzen.\n\nGenauer geht es darum, einzuschätzen, welchen Punkt der vor Ihnen platzierten Leiste die Person in dem Foto anschaut. Wenn Sie sich entschieden haben, geben Sie Ihr Urteil bitte in die dafür vorgesehene Textbox auf dem Bildschirm ein.\n\n\n',
     font='Open Sans',
     pos=(0, 0), height=0.05, wrapWidth=1.75, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=0.0);
+    depth=-1.0);
 inst_exp_continue = visual.TextStim(win=win, name='inst_exp_continue',
     text='Herzlich Willkommen.\n\nIn dieser Studie untersuchen wir, wie wir die Blicke anderer Personen wahrnehmen.\n\nDazu werden Ihnen im Folgenden die Fotos verschiedener Personen gezeigt. Ihre Aufgabe besteht darin, die Blickrichtung der gerade auf dem Bildschirm präsentierten Person einzuschätzen.\n\nGenauer geht es darum, einzuschätzen, welchen Punkt der vor Ihnen platzierten Leiste die Person in dem Foto anschaut. Wenn Sie sich entschieden haben, geben Sie Ihr Urteil bitte in die dafür vorgesehene Textbox auf dem Bildschirm ein.\n\n\nWeiter durch Drücken der LEERTASTE',
     font='Open Sans',
     pos=(0, 0), height=0.05, wrapWidth=1.75, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-1.0);
+    depth=-2.0);
 kb_inst_start = keyboard.Keyboard()
 
 # --- Initialize components for Routine "instructions_training" ---
@@ -130,15 +139,21 @@ inst_train_continue = visual.TextStim(win=win, name='inst_train_continue',
     depth=-1.0);
 key_inst_train = keyboard.Keyboard()
 
-# --- Initialize components for Routine "ITI_training" ---
-ISI_training = clock.StaticPeriod(win=win, screenHz=expInfo['frameRate'], name='ISI_training')
+# --- Initialize components for Routine "ITI_Training" ---
+text_iti_train = visual.TextStim(win=win, name='text_iti_train',
+    text=None,
+    font='Open Sans',
+    pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=0.0);
 
 # --- Initialize components for Routine "training" ---
 img_training = visual.ImageStim(
     win=win,
-    name='img_training', units='pix', 
+    name='img_training', units='norm', 
     image='sin', mask=None, anchor='center',
-    ori=0.0, pos=(0, 0), size=(1280, 1024),
+    ori=0.0, pos=(0, 0), size=(2, 2),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=0.0)
@@ -147,7 +162,7 @@ judgement = visual.TextBox2(
      pos=(0, -0.9),units='norm',     letterHeight=0.05,
      size=(0.15, 0.1), borderWidth=1.0,
      color='white', colorSpace='rgb',
-     opacity=None,
+     opacity=0.5,
      bold=False, italic=False,
      lineSpacing=1.0,
      padding=0.0, alignment='center',
@@ -158,18 +173,16 @@ judgement = visual.TextBox2(
      name='judgement',
      autoLog=True,
 )
-# Run 'Begin Experiment' code from code_training
-numbers = [str(x) for x in range(40)]
 
 # --- Initialize components for Routine "instructions_exp" ---
 instr_ex = visual.TextStim(win=win, name='instr_ex',
-    text='Trainingsdurchgänge abgeschlossen.\nBei Fragen wenden Sie sich bitte an den:die Versuchsleiter:in im Nebenraum.',
+    text='Trainingsdurchgänge abgeschlossen.\nBei Fragen wenden Sie sich bitte an den:die Versuchsleiter:in im Nebenraum.\n\n\nExperiment durch Drücken der LEERTASTE beginnen.',
     font='Open Sans',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
-instr_ex_continue = visual.TextStim(win=win, name='instr_ex_continue',
+instr_ex_cont = visual.TextStim(win=win, name='instr_ex_cont',
     text='Trainingsdurchgänge abgeschlossen.\nBei Fragen wenden Sie sich bitte an den:die Versuchsleiter:in im Nebenraum.\n\n\nExperiment durch Drücken der LEERTASTE beginnen.',
     font='Open Sans',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
@@ -178,15 +191,21 @@ instr_ex_continue = visual.TextStim(win=win, name='instr_ex_continue',
     depth=-1.0);
 kb_inst_exp = keyboard.Keyboard()
 
-# --- Initialize components for Routine "ITI_exp" ---
-ISI_exp = clock.StaticPeriod(win=win, screenHz=expInfo['frameRate'], name='ISI_exp')
+# --- Initialize components for Routine "ITI_Exp" ---
+text_iti_exp = visual.TextStim(win=win, name='text_iti_exp',
+    text=None,
+    font='Open Sans',
+    pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=0.0);
 
 # --- Initialize components for Routine "experiment" ---
 img_exp = visual.ImageStim(
     win=win,
-    name='img_exp', units='pix', 
+    name='img_exp', units='norm', 
     image='sin', mask=None, anchor='center',
-    ori=0.0, pos=(0, 0), size=(1280, 1024),
+    ori=0.0, pos=(0, 0), size=(2, 2),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
     texRes=128.0, interpolate=True, depth=0.0)
@@ -195,7 +214,7 @@ judgement_exp = visual.TextBox2(
      pos=(0, -0.9),units='norm',     letterHeight=0.05,
      size=(0.15, 0.1), borderWidth=1.0,
      color='white', colorSpace='rgb',
-     opacity=None,
+     opacity=0.5,
      bold=False, italic=False,
      lineSpacing=1.0,
      padding=0.0, alignment='center',
@@ -262,7 +281,7 @@ while continueRoutine:
         inst_exp.setAutoDraw(True)
     if inst_exp.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > inst_exp.tStartRefresh + 7-frameTolerance:
+        if tThisFlipGlobal > inst_exp.tStartRefresh + d_inst_start-frameTolerance:
             # keep track of stop time/frame for later
             inst_exp.tStop = t  # not accounting for scr refresh
             inst_exp.frameNStop = frameN  # exact frame index
@@ -271,7 +290,7 @@ while continueRoutine:
             inst_exp.setAutoDraw(False)
     
     # *inst_exp_continue* updates
-    if inst_exp_continue.status == NOT_STARTED and tThisFlip >= 7.0-frameTolerance:
+    if inst_exp_continue.status == NOT_STARTED and tThisFlip >= d_inst_start-frameTolerance:
         # keep track of start time/frame for later
         inst_exp_continue.frameNStart = frameN  # exact frame index
         inst_exp_continue.tStart = t  # local t and not account for scr refresh
@@ -283,7 +302,7 @@ while continueRoutine:
     
     # *kb_inst_start* updates
     waitOnFlip = False
-    if kb_inst_start.status == NOT_STARTED and tThisFlip >= 7.0-frameTolerance:
+    if kb_inst_start.status == NOT_STARTED and tThisFlip >= d_inst_start-frameTolerance:
         # keep track of start time/frame for later
         kb_inst_start.frameNStart = frameN  # exact frame index
         kb_inst_start.tStart = t  # local t and not account for scr refresh
@@ -372,7 +391,7 @@ while continueRoutine:
         inst_train.setAutoDraw(True)
     if inst_train.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > inst_train.tStartRefresh + 7-frameTolerance:
+        if tThisFlipGlobal > inst_train.tStartRefresh + d_inst_train-frameTolerance:
             # keep track of stop time/frame for later
             inst_train.tStop = t  # not accounting for scr refresh
             inst_train.frameNStop = frameN  # exact frame index
@@ -381,7 +400,7 @@ while continueRoutine:
             inst_train.setAutoDraw(False)
     
     # *inst_train_continue* updates
-    if inst_train_continue.status == NOT_STARTED and tThisFlip >= 7.0-frameTolerance:
+    if inst_train_continue.status == NOT_STARTED and tThisFlip >= d_inst_train-frameTolerance:
         # keep track of start time/frame for later
         inst_train_continue.frameNStart = frameN  # exact frame index
         inst_train_continue.tStart = t  # local t and not account for scr refresh
@@ -393,7 +412,7 @@ while continueRoutine:
     
     # *key_inst_train* updates
     waitOnFlip = False
-    if key_inst_train.status == NOT_STARTED and tThisFlip >= 7-frameTolerance:
+    if key_inst_train.status == NOT_STARTED and tThisFlip >= d_inst_train-frameTolerance:
         # keep track of start time/frame for later
         key_inst_train.frameNStart = frameN  # exact frame index
         key_inst_train.tStart = t  # local t and not account for scr refresh
@@ -459,13 +478,13 @@ for thisTrials_training in trials_training:
         for paramName in thisTrials_training:
             exec('{} = thisTrials_training[paramName]'.format(paramName))
     
-    # --- Prepare to start Routine "ITI_training" ---
+    # --- Prepare to start Routine "ITI_Training" ---
     continueRoutine = True
     routineForceEnded = False
     # update component parameters for each repeat
     # keep track of which components have finished
-    ITI_trainingComponents = [ISI_training]
-    for thisComponent in ITI_trainingComponents:
+    ITI_TrainingComponents = [text_iti_train]
+    for thisComponent in ITI_TrainingComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
         thisComponent.tStartRefresh = None
@@ -477,7 +496,7 @@ for thisTrials_training in trials_training:
     _timeToFirstFrame = win.getFutureFlipTime(clock="now")
     frameN = -1
     
-    # --- Run Routine "ITI_training" ---
+    # --- Run Routine "ITI_Training" ---
     while continueRoutine and routineTimer.getTime() < 1.0:
         # get current time
         t = routineTimer.getTime()
@@ -485,22 +504,26 @@ for thisTrials_training in trials_training:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
-        # *ISI_training* period
-        if ISI_training.status == NOT_STARTED and t >= 0-frameTolerance:
+        
+        # *text_iti_train* updates
+        if text_iti_train.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            ISI_training.frameNStart = frameN  # exact frame index
-            ISI_training.tStart = t  # local t and not account for scr refresh
-            ISI_training.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(ISI_training, 'tStartRefresh')  # time at next scr refresh
+            text_iti_train.frameNStart = frameN  # exact frame index
+            text_iti_train.tStart = t  # local t and not account for scr refresh
+            text_iti_train.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_iti_train, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.addData('ISI_training.started', t)
-            ISI_training.start(1)
-        elif ISI_training.status == STARTED:  # one frame should pass before updating params and completing
-            # Updating other components during *ISI_training*
-            img_training.setImage(img_rel_path)
-            # Component updates done
-            ISI_training.complete()  # finish the static period
-            ISI_training.tStop = ISI_training.tStart + 1  # record stop time
+            thisExp.timestampOnFlip(win, 'text_iti_train.started')
+            text_iti_train.setAutoDraw(True)
+        if text_iti_train.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_iti_train.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                text_iti_train.tStop = t  # not accounting for scr refresh
+                text_iti_train.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'text_iti_train.stopped')
+                text_iti_train.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -511,7 +534,7 @@ for thisTrials_training in trials_training:
             routineForceEnded = True
             break
         continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in ITI_trainingComponents:
+        for thisComponent in ITI_TrainingComponents:
             if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                 continueRoutine = True
                 break  # at least one component has not yet finished
@@ -520,8 +543,8 @@ for thisTrials_training in trials_training:
         if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
             win.flip()
     
-    # --- Ending Routine "ITI_training" ---
-    for thisComponent in ITI_trainingComponents:
+    # --- Ending Routine "ITI_Training" ---
+    for thisComponent in ITI_TrainingComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
@@ -534,6 +557,7 @@ for thisTrials_training in trials_training:
     continueRoutine = True
     routineForceEnded = False
     # update component parameters for each repeat
+    img_training.setImage(img_rel_path)
     judgement.reset()
     # Run 'Begin Routine' code from code_training
     modify = False
@@ -584,18 +608,17 @@ for thisTrials_training in trials_training:
             thisExp.timestampOnFlip(win, 'judgement.started')
             judgement.setAutoDraw(True)
         # Run 'Each Frame' code from code_training
-        keys = event.getKeys(keyList=['1','2','3','4','5','6','7','8','9','0', 'return', 'backspace'])
-        
+        keys = event.getKeys(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'return', 'backspace'])
         
         if len(keys):
             if 'backspace' in keys:
-                judgement_exp.text = judgement_exp.text[:-1]
-            elif 'return' in keys:
+                judgement.text = judgement.text[:-1]
+            elif 'return' in keys and judgement.text != '':
                 continueRoutine = False
+            elif 'return' in keys and judgement.text == '':
+                pass
             else:
-                judgement_exp.text = judgement_exp.text + keys[0]
-        
-        
+                judgement.text = judgement.text + keys[0]
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -636,7 +659,7 @@ kb_inst_exp.keys = []
 kb_inst_exp.rt = []
 _kb_inst_exp_allKeys = []
 # keep track of which components have finished
-instructions_expComponents = [instr_ex, instr_ex_continue, kb_inst_exp]
+instructions_expComponents = [instr_ex, instr_ex_cont, kb_inst_exp]
 for thisComponent in instructions_expComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -670,7 +693,7 @@ while continueRoutine:
         instr_ex.setAutoDraw(True)
     if instr_ex.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > instr_ex.tStartRefresh + 3-frameTolerance:
+        if tThisFlipGlobal > instr_ex.tStartRefresh + d_inst_exp-frameTolerance:
             # keep track of stop time/frame for later
             instr_ex.tStop = t  # not accounting for scr refresh
             instr_ex.frameNStop = frameN  # exact frame index
@@ -678,20 +701,20 @@ while continueRoutine:
             thisExp.timestampOnFlip(win, 'instr_ex.stopped')
             instr_ex.setAutoDraw(False)
     
-    # *instr_ex_continue* updates
-    if instr_ex_continue.status == NOT_STARTED and tThisFlip >= 3.0-frameTolerance:
+    # *instr_ex_cont* updates
+    if instr_ex_cont.status == NOT_STARTED and tThisFlip >= d_inst_exp-frameTolerance:
         # keep track of start time/frame for later
-        instr_ex_continue.frameNStart = frameN  # exact frame index
-        instr_ex_continue.tStart = t  # local t and not account for scr refresh
-        instr_ex_continue.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(instr_ex_continue, 'tStartRefresh')  # time at next scr refresh
+        instr_ex_cont.frameNStart = frameN  # exact frame index
+        instr_ex_cont.tStart = t  # local t and not account for scr refresh
+        instr_ex_cont.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(instr_ex_cont, 'tStartRefresh')  # time at next scr refresh
         # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'instr_ex_continue.started')
-        instr_ex_continue.setAutoDraw(True)
+        thisExp.timestampOnFlip(win, 'instr_ex_cont.started')
+        instr_ex_cont.setAutoDraw(True)
     
     # *kb_inst_exp* updates
     waitOnFlip = False
-    if kb_inst_exp.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
+    if kb_inst_exp.status == NOT_STARTED and tThisFlip >= d_inst_exp-frameTolerance:
         # keep track of start time/frame for later
         kb_inst_exp.frameNStart = frameN  # exact frame index
         kb_inst_exp.tStart = t  # local t and not account for scr refresh
@@ -757,13 +780,13 @@ for thisTrials_exp in trials_exp:
         for paramName in thisTrials_exp:
             exec('{} = thisTrials_exp[paramName]'.format(paramName))
     
-    # --- Prepare to start Routine "ITI_exp" ---
+    # --- Prepare to start Routine "ITI_Exp" ---
     continueRoutine = True
     routineForceEnded = False
     # update component parameters for each repeat
     # keep track of which components have finished
-    ITI_expComponents = [ISI_exp]
-    for thisComponent in ITI_expComponents:
+    ITI_ExpComponents = [text_iti_exp]
+    for thisComponent in ITI_ExpComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
         thisComponent.tStartRefresh = None
@@ -775,7 +798,7 @@ for thisTrials_exp in trials_exp:
     _timeToFirstFrame = win.getFutureFlipTime(clock="now")
     frameN = -1
     
-    # --- Run Routine "ITI_exp" ---
+    # --- Run Routine "ITI_Exp" ---
     while continueRoutine and routineTimer.getTime() < 1.0:
         # get current time
         t = routineTimer.getTime()
@@ -783,22 +806,26 @@ for thisTrials_exp in trials_exp:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
-        # *ISI_exp* period
-        if ISI_exp.status == NOT_STARTED and t >= 0-frameTolerance:
+        
+        # *text_iti_exp* updates
+        if text_iti_exp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            ISI_exp.frameNStart = frameN  # exact frame index
-            ISI_exp.tStart = t  # local t and not account for scr refresh
-            ISI_exp.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(ISI_exp, 'tStartRefresh')  # time at next scr refresh
+            text_iti_exp.frameNStart = frameN  # exact frame index
+            text_iti_exp.tStart = t  # local t and not account for scr refresh
+            text_iti_exp.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_iti_exp, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.addData('ISI_exp.started', t)
-            ISI_exp.start(1)
-        elif ISI_exp.status == STARTED:  # one frame should pass before updating params and completing
-            # Updating other components during *ISI_exp*
-            img_exp.setImage(img_rel_path)
-            # Component updates done
-            ISI_exp.complete()  # finish the static period
-            ISI_exp.tStop = ISI_exp.tStart + 1  # record stop time
+            thisExp.timestampOnFlip(win, 'text_iti_exp.started')
+            text_iti_exp.setAutoDraw(True)
+        if text_iti_exp.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_iti_exp.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                text_iti_exp.tStop = t  # not accounting for scr refresh
+                text_iti_exp.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'text_iti_exp.stopped')
+                text_iti_exp.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -809,7 +836,7 @@ for thisTrials_exp in trials_exp:
             routineForceEnded = True
             break
         continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in ITI_expComponents:
+        for thisComponent in ITI_ExpComponents:
             if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                 continueRoutine = True
                 break  # at least one component has not yet finished
@@ -818,8 +845,8 @@ for thisTrials_exp in trials_exp:
         if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
             win.flip()
     
-    # --- Ending Routine "ITI_exp" ---
-    for thisComponent in ITI_expComponents:
+    # --- Ending Routine "ITI_Exp" ---
+    for thisComponent in ITI_ExpComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
@@ -832,13 +859,12 @@ for thisTrials_exp in trials_exp:
     continueRoutine = True
     routineForceEnded = False
     # update component parameters for each repeat
+    img_exp.setImage(img_rel_path)
     judgement_exp.reset()
     # Run 'Begin Routine' code from code_exp
     modify = False
     judgement_exp.text = ''
     event.clearEvents('keyboard')
-    
-    
     # keep track of which components have finished
     experimentComponents = [img_exp, judgement_exp]
     for thisComponent in experimentComponents:
@@ -884,18 +910,14 @@ for thisTrials_exp in trials_exp:
             thisExp.timestampOnFlip(win, 'judgement_exp.started')
             judgement_exp.setAutoDraw(True)
         # Run 'Each Frame' code from code_exp
-        keys = event.getKeys(keyList=['1','2','3','4','5','6','7','8','9','0', 'return', 'backspace'])
-        
+        keys = event.getKeys()
         if len(keys):
             if 'backspace' in keys:
                 judgement_exp.text = judgement_exp.text[:-1]
-            elif 'return' in keys and judgement_exp.text in numbers:
+            elif 'return' in keys:
                 continueRoutine = False
-            elif 'return' in keys and judgement_exp.text not in numbers:
-                pass
             else:
                 judgement_exp.text = judgement_exp.text + keys[0]
-        
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
