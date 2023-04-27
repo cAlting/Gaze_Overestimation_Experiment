@@ -1,6 +1,10 @@
 
-data/
+data/*
 img_train/*
 img_exp/*
 GazeEst_lastrun.py
 GazeEst_lastrun.py
+GazeEst_WIP_lastrun.py
+backup/*
+backup/*
+GazeEst_WIP_lastrun.py

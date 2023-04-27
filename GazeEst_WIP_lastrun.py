@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.4),
-    on April 26, 2023, at 19:57
+    on April 27, 2023, at 17:49
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -644,6 +644,8 @@ for thisTrials_training in trials_training:
             thisComponent.setAutoDraw(False)
     # Run 'End Routine' code from code_training
     thisExp.addData("answer", judgement.text)
+    thisExp.addData("RT", t)
+    thisExp.addData("Looker Gender", looker[0])
     # the Routine "training" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     thisExp.nextEntry()
@@ -762,7 +764,7 @@ for thisComponent in instructions_expComponents:
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-trials_exp = data.TrialHandler(nReps=6.0, method='random', 
+trials_exp = data.TrialHandler(nReps=6.0, method='fullRandom', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('cond_exp.xlsx'),
     seed=None, name='trials_exp')
@@ -910,12 +912,15 @@ for thisTrials_exp in trials_exp:
             thisExp.timestampOnFlip(win, 'judgement_exp.started')
             judgement_exp.setAutoDraw(True)
         # Run 'Each Frame' code from code_exp
-        keys = event.getKeys()
+        keys = event.getKeys(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'return', 'backspace'])
+        
         if len(keys):
             if 'backspace' in keys:
                 judgement_exp.text = judgement_exp.text[:-1]
-            elif 'return' in keys:
+            elif 'return' in keys and judgement_exp.text != '':
                 continueRoutine = False
+            elif 'return' in keys and judgement_exp.text == '':
+                pass
             else:
                 judgement_exp.text = judgement_exp.text + keys[0]
         
@@ -943,6 +948,8 @@ for thisTrials_exp in trials_exp:
             thisComponent.setAutoDraw(False)
     # Run 'End Routine' code from code_exp
     thisExp.addData("answer", judgement_exp.text)
+    thisExp.addData("RT", t)
+    thisExp.addData("Looker Gender", looker[0])
     # the Routine "experiment" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     thisExp.nextEntry()
