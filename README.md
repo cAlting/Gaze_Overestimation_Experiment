@@ -8,4 +8,4 @@ This experiment uses different looker with different gaze deviations. The naming
 _to do_
 
 # Image preprocessing
-_to do_
+_detailed description wip_ For now refer to the code comments in the provided jupyter notebook `Preprocessing_Pipeline.ipynb`.
