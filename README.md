@@ -1,5 +1,5 @@
 # Short Description
-Experiment to investigate the influence effect of different eye shape parameter on the overestimation effect observed during jugdments of another persons's gaze directions.
+Experiment to investigate the influence effect of different eye shape parameter on the overestimation effect observed during jugdments of another persons's gaze directions. The procedure is based on the one reported by [Anstis, Mayhew, & Morley (1969) The perception of where a face or television "portrait" is looking](https://psycnet.apa.org/record/1970-11652-001).
 
 _The stimuli/Image files are NOT included (privacy)_  
 
