@@ -1,0 +1,27 @@
+{
+    "id": "9D4FB9FF",
+    "path": "~/Masterarbeit/Code/Gaze Estimation (R)/Scripts/02_Eye_Morphology_Literature.R",
+    "project_path": "Scripts/02_Eye_Morphology_Literature.R",
+    "type": "r_source",
+    "hash": "579558711",
+    "contents": "",
+    "dirty": false,
+    "created": 1686514133596.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "304,39",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1686682473,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1686682473661,
+    "read_only": false,
+    "read_only_alternatives": []
+}

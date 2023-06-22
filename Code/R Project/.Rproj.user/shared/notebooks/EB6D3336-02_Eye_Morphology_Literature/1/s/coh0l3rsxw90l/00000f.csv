@@ -1,0 +1,38 @@
+"0","df_danel_2020 <- tibble(
+  looker_gender = c(""f"", ""m""),
+  SSI_M = c(1.85, 1.91),
+  SSI_Md = c(1.84, 1.91),
+  SSI_Min = c(1.67, 1.68),
+  SSI_Max = c(2.1, 2.13),
+  SSI_SD = c(0.095, 0.1),
+  SSI_Normality = c(""W=0.9859, p=0.81"", ""W=0.9863, p=0.83""),
+  WHR_M = c(2.65, 2.85),
+  WHR_Md = c(2.64, 2.80),
+  WHR_Min = c(2.19, 2.18),
+  WHR_Max = c(3.18, 3.83),
+  WHR_SD = c(0.258, 0.315),
+  WHR_Normality = c(""W=0.9744, p=0.35"", ""W=0.9662, p=0.16""),
+  RIL_M = c(37.78, 33.85),
+  RIL_Md = c(38.88, 34.74),
+  RIL_Min = c(16.86, 16.62),
+  RIL_Max = c(54.23, 52.37),
+  RIL_SD = c(7.30, 9.017),
+  RIL_Normality = c(""W=0.9725, p=0.29"", ""W=0.9747, p=0.36""),
+  SSR_M = c(42.36, 43.52),
+  SSR_Md = c(41.71, 42.92),
+  SSR_Min = c(29.59, 30.80),
+  SSR_Max = c(60.80, 54,57),
+  SSR_SD = c(6.92, 5.642),
+  SSR_Normality = c(""W=0.9781, p=0.47"", ""W=0.9738, P=0.33"")
+)
+"
+"1","[1m[33mError[39m:[22m
+[33m![39m Tibble columns must have compatible sizes.
+[36m•[39m Size 2: Existing data.
+[36m•[39m Size 3: Column `SSR_Max`.
+[34mℹ[39m Only values of size one are recycled.
+Backtrace:
+[90m 1. [39m[1mtibble[22m::tibble(...)
+[90m 2. [39mtibble:::tibble_quos(xs, .rows, .name_repair)
+[90m 3. [39mtibble:::vectbl_recycle_rows(res, first_size, j, given_col_names[[j]])
+"
