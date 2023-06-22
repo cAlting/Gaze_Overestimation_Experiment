@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="2022.2.4">
+  <Settings>
+    <Param val="use prefs" valType="str" updates="None" name="Audio latency priority"/>
+    <Param val="use prefs" valType="str" updates="None" name="Audio lib"/>
+    <Param val="" valType="str" updates="None" name="Completed URL"/>
+    <Param val="auto" valType="str" updates="None" name="Data file delimiter"/>
+    <Param val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code" updates="None" name="Data filename"/>
+    <Param val="True" valType="bool" updates="None" name="Enable Escape"/>
+    <Param val="{'participant': 'f&quot;{randint(0, 999999):06.0f}&quot;', 'subject_gender': '[&quot;m&quot;, &quot;w&quot;, &quot;d&quot;]', 'subject_age': 'f&quot;{randint(18, 35):02.0f}&quot;'}" valType="code" updates="None" name="Experiment info"/>
+    <Param val="True" valType="bool" updates="None" name="Force stereo"/>
+    <Param val="False" valType="bool" updates="None" name="Full-screen window"/>
+    <Param val="" valType="str" updates="None" name="HTML path"/>
+    <Param val="" valType="str" updates="None" name="Incomplete URL"/>
+    <Param val="testMonitor" valType="str" updates="None" name="Monitor"/>
+    <Param val="[]" valType="list" updates="None" name="Resources"/>
+    <Param val="False" valType="bool" updates="None" name="Save csv file"/>
+    <Param val="False" valType="bool" updates="None" name="Save excel file"/>
+    <Param val="False" valType="bool" updates="None" name="Save hdf5 file"/>
+    <Param val="True" valType="bool" updates="None" name="Save log file"/>
+    <Param val="True" valType="bool" updates="None" name="Save psydat file"/>
+    <Param val="True" valType="bool" updates="None" name="Save wide csv file"/>
+    <Param val="1" valType="num" updates="None" name="Screen"/>
+    <Param val="True" valType="bool" updates="None" name="Show info dlg"/>
+    <Param val="False" valType="bool" updates="None" name="Show mouse"/>
+    <Param val="norm" valType="str" updates="None" name="Units"/>
+    <Param val="2022.2.4" valType="str" updates="None" name="Use version"/>
+    <Param val="[1280, 1024]" valType="list" updates="None" name="Window size (pixels)"/>
+    <Param val="avg" valType="str" updates="None" name="blendMode"/>
+    <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+    <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+    <Param val="100.1.1.1" valType="str" updates="None" name="elAddress"/>
+    <Param val="FILTER_LEVEL_2" valType="str" updates="None" name="elDataFiltering"/>
+    <Param val="FILTER_LEVEL_OFF" valType="str" updates="None" name="elLiveFiltering"/>
+    <Param val="EYELINK 1000 DESKTOP" valType="str" updates="None" name="elModel"/>
+    <Param val="ELLIPSE_FIT" valType="str" updates="None" name="elPupilAlgorithm"/>
+    <Param val="PUPIL_AREA" valType="str" updates="None" name="elPupilMeasure"/>
+    <Param val="1000" valType="num" updates="None" name="elSampleRate"/>
+    <Param val="False" valType="bool" updates="None" name="elSimMode"/>
+    <Param val="RIGHT_EYE" valType="str" updates="None" name="elTrackEyes"/>
+    <Param val="PUPIL_CR_TRACKING" valType="str" updates="None" name="elTrackingMode"/>
+    <Param val="Gaze_Estimation" valType="str" updates="None" name="expName"/>
+    <Param val="on Sync" valType="str" updates="None" name="exportHTML"/>
+    <Param val="None" valType="str" updates="None" name="eyetracker"/>
+    <Param val="127.0.0.1" valType="str" updates="None" name="gpAddress"/>
+    <Param val="4242" valType="num" updates="None" name="gpPort"/>
+    <Param val="PsychToolbox" valType="str" updates="None" name="keyboardBackend"/>
+    <Param val="exp" valType="code" updates="None" name="logging level"/>
+    <Param val="('MIDDLE_BUTTON',)" valType="list" updates="None" name="mgBlink"/>
+    <Param val="CONTINUOUS" valType="str" updates="None" name="mgMove"/>
+    <Param val="0.5" valType="num" updates="None" name="mgSaccade"/>
+    <Param val="0.6" valType="num" updates="None" name="plConfidenceThreshold"/>
+    <Param val="True" valType="bool" updates="None" name="plPupilCaptureRecordingEnabled"/>
+    <Param val="" valType="str" updates="None" name="plPupilCaptureRecordingLocation"/>
+    <Param val="127.0.0.1" valType="str" updates="None" name="plPupilRemoteAddress"/>
+    <Param val="50020" valType="num" updates="None" name="plPupilRemotePort"/>
+    <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
+    <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
+    <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
+    <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
+    <Param val="" valType="str" updates="None" name="tbModel"/>
+    <Param val="60" valType="num" updates="None" name="tbSampleRate"/>
+    <Param val="" valType="str" updates="None" name="tbSerialNo"/>
+  </Settings>
+  <Routines>
+    <Routine name="instructions_training">
+      <TextComponent name="inst_train">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="5" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="inst_train" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="$d_inst_train" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Trainingsblock&amp;#10;&amp;#10;In den folgenden 10 Durchgängen haben Sie die Möglichkeit, sich mit dem Ablauf des Experimentes vertraut zu machen. &amp;#10;&amp;#10;Die Aufgabe:&amp;#10;Bitte schätzen Sie unter Zuhilfenahme der vor Ihnen platzierten Leiste und Skala den Punkt auf der Leiste/Skala ein, der von der auf dem Bildschirm präsentierten Person angeschaut wird. &amp;#10;Geben Sie Ihr Urteil bitte in die dafür vorgesehene Textbox ein.&amp;#10;&amp;#10;Im Anschluss an das Training haben Sie die Möglichkeit, mögliche Fragen mit dem:der Versuchsleiter:in zu klären.&amp;#10;&amp;#10;" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="1.75" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <TextComponent name="inst_train_continue">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="inst_train_continue" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="5" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="$d_inst_train" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Trainingsblock&amp;#10;&amp;#10;In den folgenden 10 Durchgängen haben Sie die Möglichkeit, sich mit dem Ablauf des Experimentes vertraut zu machen. &amp;#10;&amp;#10;Die Aufgabe:&amp;#10;Bitte schätzen Sie unter Zuhilfenahme der vor Ihnen platzierten Leiste und Skala den Punkt auf der Leiste/Skala ein, der von der auf dem Bildschirm präsentierten Person angeschaut wird. &amp;#10;Geben Sie Ihr Urteil bitte in die dafür vorgesehene Textbox ein.&amp;#10;&amp;#10;Im Anschluss an das Training haben Sie die Möglichkeit, mögliche Fragen mit dem:der Versuchsleiter:in zu klären.&amp;#10;&amp;#10;Weiter durch Drücken der LEERTASTE" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="1.75" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="key_inst_train">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="key_inst_train" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="5" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="$d_inst_train" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="nothing" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="training">
+      <ImageComponent name="img_training">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="$img_rel_path" valType="file" updates="set every repeat" name="image"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="" valType="str" updates="constant" name="mask"/>
+        <Param val="img_training" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="(2, 2)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="norm" valType="str" updates="None" name="units"/>
+      </ImageComponent>
+      <TextboxComponent name="judgement">
+        <Param val="center" valType="str" updates="constant" name="alignment"/>
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="True" valType="bool" updates="constant" name="autoLog"/>
+        <Param val="False" valType="bool" updates="constant" name="bold"/>
+        <Param val="-0.3020, -0.3020, -0.3020" valType="color" updates="constant" name="borderColor"/>
+        <Param val="1" valType="num" updates="constant" name="borderWidth"/>
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="editable"/>
+        <Param val="0.0039, 0.0039, 0.0039" valType="color" updates="constant" name="fillColor"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="False" valType="bool" updates="constant" name="italic"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="1.0" valType="num" updates="constant" name="lineSpacing"/>
+        <Param val="judgement" valType="code" updates="None" name="name"/>
+        <Param val="0.5" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="0" valType="num" updates="constant" name="padding"/>
+        <Param val="(0, -0.9)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="(0.15, 0.1)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="" valType="str" updates="constant" name="text"/>
+        <Param val="norm" valType="str" updates="None" name="units"/>
+      </TextboxComponent>
+      <CodeComponent name="code_training">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="modify = false;&amp;#10;judgement.text = &quot;&quot;;&amp;#10;psychoJS.eventManager.clearEvents(&quot;keyboard&quot;);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="modify = False&amp;#10;judgement.text = ''&amp;#10;event.clearEvents('keyboard')" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="keys = event.getKeys(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'return', 'backspace'])&amp;#10;&amp;#10;if len(keys):&amp;#10;    if 'backspace' in keys:&amp;#10;        judgement.text = judgement.text[:-1]&amp;#10;    elif 'return' in keys and judgement.text != '':&amp;#10;        continueRoutine = False&amp;#10;    elif 'return' in keys and judgement.text == '':&amp;#10;        pass&amp;#10;    else:&amp;#10;        judgement.text = judgement.text + keys[0]" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;keys = psychoJS.eventManager.getKeys([&quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;0&quot;, &quot;return&quot;, &quot;backspace&quot;]);&amp;#10;if (keys.length) {&amp;#10;    if (_pj.in_es6(&quot;backspace&quot;, keys)) {&amp;#10;        judgement.text = judgement.text.slice(0, (- 1));&amp;#10;    } else {&amp;#10;        if ((_pj.in_es6(&quot;return&quot;, keys) &amp;&amp; (judgement.text !== &quot;&quot;))) {&amp;#10;            continueRoutine = false;&amp;#10;        } else {&amp;#10;            if ((_pj.in_es6(&quot;return&quot;, keys) &amp;&amp; (judgement.text === &quot;&quot;))) {&amp;#10;            } else {&amp;#10;                judgement.text = (judgement.text + keys[0]);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="psychoJS.experiment.addData(&quot;answer&quot;, judgement.text);&amp;#10;psychoJS.experiment.addData(&quot;RT&quot;, t);&amp;#10;psychoJS.experiment.addData(&quot;looker_gender&quot;, looker[0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="thisExp.addData(&quot;answer&quot;, judgement.text)&amp;#10;thisExp.addData(&quot;RT&quot;, t)&amp;#10;thisExp.addData(&quot;looker_gender&quot;, looker[0])" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code_training" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="instructions_experiment_2"/>
+    <Routine name="instructions_start">
+      <CodeComponent name="code">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="# duration of instruction (start)&amp;#10;d_inst_start = 1&amp;#10;&amp;#10;# duration of instruction (training)&amp;#10;d_inst_train = 1&amp;#10;&amp;#10;# duration of instruction (exp)&amp;#10;d_inst_exp = 1&amp;#10;&amp;#10;# duration of iti (ext and training)&amp;#10;d_iti = 0.5" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="$inst_start = 1;&amp;#10;$inst_train = 1;&amp;#10;$inst_exp = 1;&amp;#10;$iti = 0.5;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <TextComponent name="inst_exp">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="5" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="inst_exp" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="0" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="$d_inst_start" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Herzlich Willkommen.&amp;#10;&amp;#10;In dieser Studie untersuchen wir, wie wir die Blicke anderer Personen wahrnehmen.&amp;#10;&amp;#10;Dazu werden Ihnen im Folgenden die Fotos verschiedener Personen gezeigt. Ihre Aufgabe besteht darin, die Blickrichtung der gerade auf dem Bildschirm präsentierten Person einzuschätzen.&amp;#10;&amp;#10;Genauer geht es darum, einzuschätzen, welchen Punkt der vor Ihnen platzierten Leiste die Person in dem Foto anschaut. Wenn Sie sich entschieden haben, geben Sie Ihr Urteil bitte in die dafür vorgesehene Textbox auf dem Bildschirm ein.&amp;#10;&amp;#10;&amp;#10;" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="1.75" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <TextComponent name="inst_exp_continue">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="inst_exp_continue" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="5" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="$d_inst_start" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Herzlich Willkommen.&amp;#10;&amp;#10;In dieser Studie untersuchen wir, wie wir die Blicke anderer Personen wahrnehmen.&amp;#10;&amp;#10;Dazu werden Ihnen im Folgenden die Fotos verschiedener Personen gezeigt. Ihre Aufgabe besteht darin, die Blickrichtung der gerade auf dem Bildschirm präsentierten Person einzuschätzen.&amp;#10;&amp;#10;Genauer geht es darum, einzuschätzen, welchen Punkt der vor Ihnen platzierten Leiste die Person in dem Foto anschaut. Wenn Sie sich entschieden haben, geben Sie Ihr Urteil bitte in die dafür vorgesehene Textbox auf dem Bildschirm ein.&amp;#10;&amp;#10;&amp;#10;Weiter durch Drücken der LEERTASTE" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="1.75" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="kb_inst_start">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="kb_inst_start" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="5" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="$d_inst_start" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="nothing" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+      <ResourceManagerComponent name="resources">
+        <Param val="Start and Check" valType="str" updates="None" name="actionType"/>
+        <Param val="True" valType="bool" updates="None" name="checkAll"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="resources" valType="code" updates="None" name="name"/>
+        <Param val="['img_train/M02_00.jpg', 'img_train/M02_02.jpg', 'img_train/M02_04.jpg', 'img_train/M02_06.jpg', 'img_train/M02_12.jpg', 'img_exp/F01_00.jpg', 'img_exp/F01_02.jpg', 'img_exp/F01_04.jpg', 'img_exp/F01_06.jpg', 'img_exp/F01_08.jpg', 'img_exp/F01_12.jpg', 'img_exp/F02_00.jpg', 'img_exp/F02_02.jpg', 'img_exp/F02_04.jpg', 'img_exp/F02_06.jpg', 'img_exp/F02_08.jpg', 'img_exp/F02_12.jpg', 'img_exp/F03_00.jpg', 'img_exp/F03_02.jpg', 'img_exp/F03_04.jpg', 'img_exp/F03_06.jpg', 'img_exp/F03_08.jpg', 'img_exp/F03_12.jpg', 'img_exp/F04_00.jpg', 'img_exp/F04_02.jpg', 'img_exp/F04_04.jpg', 'img_exp/F04_06.jpg', 'img_exp/F04_08.jpg', 'img_exp/F04_12.jpg', 'img_exp/F05_00.jpg', 'img_exp/F05_02.jpg', 'img_exp/F05_04.jpg', 'img_exp/F05_06.jpg', 'img_exp/F05_08.jpg', 'img_exp/F05_12.jpg', 'img_exp/F07_00.jpg', 'img_exp/F07_02.jpg', 'img_exp/F07_04.jpg', 'img_exp/F07_06.jpg', 'img_exp/F07_08.jpg', 'img_exp/F07_12.jpg', 'img_exp/F08_00.jpg', 'img_exp/F08_02.jpg', 'img_exp/F08_04.jpg', 'img_exp/F08_06.jpg', 'img_exp/F08_08.jpg', 'img_exp/F08_12.jpg', 'img_exp/F09_00.jpg', 'img_exp/F09_02.jpg', 'img_exp/F09_04.jpg', 'img_exp/F09_06.jpg', 'img_exp/F09_08.jpg', 'img_exp/F09_12.jpg', 'img_exp/F10_00.jpg', 'img_exp/F10_02.jpg', 'img_exp/F10_04.jpg', 'img_exp/F10_06.jpg', 'img_exp/F10_08.jpg', 'img_exp/F10_12.jpg', 'img_exp/F11_00.jpg', 'img_exp/F11_02.jpg', 'img_exp/F11_04.jpg', 'img_exp/F11_06.jpg', 'img_exp/F11_08.jpg', 'img_exp/F11_12.jpg', 'img_exp/F12_00.jpg', 'img_exp/F12_02.jpg', 'img_exp/F12_04.jpg', 'img_exp/F12_06.jpg', 'img_exp/F12_08.jpg', 'img_exp/F12_12.jpg', 'img_exp/F13_00.jpg', 'img_exp/F13_02.jpg', 'img_exp/F13_04.jpg', 'img_exp/F13_06.jpg', 'img_exp/F13_08.jpg', 'img_exp/F13_12.jpg', 'img_exp/F14_00.jpg', 'img_exp/F14_02.jpg', 'img_exp/F14_04.jpg', 'img_exp/F14_06.jpg', 'img_exp/F14_08.jpg', 'img_exp/F14_12.jpg', 'img_exp/F15_00.jpg', 'img_exp/F15_02.jpg', 'img_exp/F15_04.jpg', 'img_exp/F15_06.jpg', 'img_exp/F15_08.jpg', 'img_exp/F15_12.jpg', 'img_exp/F16_00.jpg', 'img_exp/F16_02.jpg', 'img_exp/F16_04.jpg', 'img_exp/F16_06.jpg', 'img_exp/F16_08.jpg', 'img_exp/F16_12.jpg', 'img_exp/F17_00.jpg', 'img_exp/F17_02.jpg', 'img_exp/F17_04.jpg', 'img_exp/F17_06.jpg', 'img_exp/F17_08.jpg', 'img_exp/F17_12.jpg', 'img_exp/F18_00.jpg', 'img_exp/F18_02.jpg', 'img_exp/F18_04.jpg', 'img_exp/F18_06.jpg', 'img_exp/F18_08.jpg', 'img_exp/F18_12.jpg', 'img_exp/F19_00.jpg', 'img_exp/F19_02.jpg', 'img_exp/F19_04.jpg', 'img_exp/F19_06.jpg', 'img_exp/F19_08.jpg', 'img_exp/F19_12.jpg', 'img_exp/F20_00.jpg', 'img_exp/F20_02.jpg', 'img_exp/F20_04.jpg', 'img_exp/F20_06.jpg', 'img_exp/F20_08.jpg', 'img_exp/F20_12.jpg', 'img_exp/F21_00.jpg', 'img_exp/F21_02.jpg', 'img_exp/F21_04.jpg', 'img_exp/F21_06.jpg', 'img_exp/F21_08.jpg', 'img_exp/F21_12.jpg', 'img_exp/F22_00.jpg', 'img_exp/F22_02.jpg', 'img_exp/F22_04.jpg', 'img_exp/F22_06.jpg', 'img_exp/F22_08.jpg', 'img_exp/F22_12.jpg', 'img_exp/F23_00.jpg', 'img_exp/F23_02.jpg', 'img_exp/F23_04.jpg', 'img_exp/F23_06.jpg', 'img_exp/F23_08.jpg', 'img_exp/F23_12.jpg', 'img_exp/F24_00.jpg', 'img_exp/F24_02.jpg', 'img_exp/F24_04.jpg', 'img_exp/F24_06.jpg', 'img_exp/F24_08.jpg', 'img_exp/F24_12.jpg', 'img_exp/F25_00.jpg', 'img_exp/F25_02.jpg', 'img_exp/F25_04.jpg', 'img_exp/F25_06.jpg', 'img_exp/F25_08.jpg', 'img_exp/F25_12.jpg', 'img_exp/F26_00.jpg', 'img_exp/F26_02.jpg', 'img_exp/F26_04.jpg', 'img_exp/F26_06.jpg', 'img_exp/F26_08.jpg', 'img_exp/F26_12.jpg', 'img_exp/F28_00.jpg', 'img_exp/F28_02.jpg', 'img_exp/F28_04.jpg', 'img_exp/F28_06.jpg', 'img_exp/F28_08.jpg', 'img_exp/F28_12.jpg', 'img_exp/M01_00.jpg', 'img_exp/M01_02.jpg', 'img_exp/M01_04.jpg', 'img_exp/M01_06.jpg', 'img_exp/M01_08.jpg', 'img_exp/M01_12.jpg', 'img_exp/M02_00.jpg', 'img_exp/M02_02.jpg', 'img_exp/M02_04.jpg', 'img_exp/M02_06.jpg', 'img_exp/M02_08.jpg', 'img_exp/M02_12.jpg', 'img_exp/M03_00.jpg', 'img_exp/M03_02.jpg', 'img_exp/M03_04.jpg', 'img_exp/M03_06.jpg', 'img_exp/M03_08.jpg', 'img_exp/M03_12.jpg', 'img_exp/M04_00.jpg', 'img_exp/M04_02.jpg', 'img_exp/M04_04.jpg', 'img_exp/M04_06.jpg', 'img_exp/M04_08.jpg', 'img_exp/M04_12.jpg', 'img_exp/M05_00.jpg', 'img_exp/M05_02.jpg', 'img_exp/M05_04.jpg', 'img_exp/M05_06.jpg', 'img_exp/M05_08.jpg', 'img_exp/M05_12.jpg', 'img_exp/M06_00.jpg', 'img_exp/M06_02.jpg', 'img_exp/M06_04.jpg', 'img_exp/M06_06.jpg', 'img_exp/M06_08.jpg', 'img_exp/M06_12.jpg', 'img_exp/M07_00.jpg', 'img_exp/M07_02.jpg', 'img_exp/M07_04.jpg', 'img_exp/M07_06.jpg', 'img_exp/M07_08.jpg', 'img_exp/M07_12.jpg', 'img_exp/M08_00.jpg', 'img_exp/M08_02.jpg', 'img_exp/M08_04.jpg', 'img_exp/M08_06.jpg', 'img_exp/M08_08.jpg', 'img_exp/M08_12.jpg', 'img_exp/M09_00.jpg', 'img_exp/M09_02.jpg', 'img_exp/M09_04.jpg', 'img_exp/M09_06.jpg', 'img_exp/M09_08.jpg', 'img_exp/M09_12.jpg', 'img_exp/M10_00.jpg', 'img_exp/M10_02.jpg', 'img_exp/M10_04.jpg', 'img_exp/M10_06.jpg', 'img_exp/M10_08.jpg', 'img_exp/M10_12.jpg', 'img_exp/M11_00.jpg', 'img_exp/M11_02.jpg', 'img_exp/M11_04.jpg', 'img_exp/M11_06.jpg', 'img_exp/M11_08.jpg', 'img_exp/M11_12.jpg', 'img_exp/M12_00.jpg', 'img_exp/M12_02.jpg', 'img_exp/M12_04.jpg', 'img_exp/M12_06.jpg', 'img_exp/M12_08.jpg', 'img_exp/M12_12.jpg', 'img_exp/M13_00.jpg', 'img_exp/M13_02.jpg', 'img_exp/M13_04.jpg', 'img_exp/M13_06.jpg', 'img_exp/M13_08.jpg', 'img_exp/M13_12.jpg', 'img_exp/M14_00.jpg', 'img_exp/M14_02.jpg', 'img_exp/M14_04.jpg', 'img_exp/M14_06.jpg', 'img_exp/M14_08.jpg', 'img_exp/M14_12.jpg']" valType="list" updates="constant" name="resources"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+      </ResourceManagerComponent>
+    </Routine>
+    <Routine name="instructions_exp">
+      <TextComponent name="instr_ex">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="5" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="instr_ex" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="$d_inst_exp" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Trainingsdurchgänge abgeschlossen.&amp;#10;Bei Fragen wenden Sie sich bitte an den:die Versuchsleiter:in im Nebenraum.&amp;#10;&amp;#10;&amp;#10;Experiment durch Drücken der LEERTASTE beginnen." valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <TextComponent name="instr_ex_cont">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="instr_ex_cont" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="5" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="$d_inst_exp" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Trainingsdurchgänge abgeschlossen.&amp;#10;Bei Fragen wenden Sie sich bitte an den:die Versuchsleiter:in im Nebenraum.&amp;#10;&amp;#10;&amp;#10;Experiment durch Drücken der LEERTASTE beginnen." valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="kb_inst_exp">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="kb_inst_exp" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="5" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="$d_inst_exp" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="nothing" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="experiment">
+      <ImageComponent name="img_exp">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="$img_rel_path" valType="file" updates="set every repeat" name="image"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="" valType="str" updates="constant" name="mask"/>
+        <Param val="img_exp" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="(2, 2)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="norm" valType="str" updates="None" name="units"/>
+      </ImageComponent>
+      <TextboxComponent name="judgement_exp">
+        <Param val="center" valType="str" updates="constant" name="alignment"/>
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="True" valType="bool" updates="constant" name="autoLog"/>
+        <Param val="False" valType="bool" updates="constant" name="bold"/>
+        <Param val="-0.3020, -0.3020, -0.3020" valType="color" updates="constant" name="borderColor"/>
+        <Param val="1" valType="num" updates="constant" name="borderWidth"/>
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="editable"/>
+        <Param val="0.0039, 0.0039, 0.0039" valType="color" updates="constant" name="fillColor"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="False" valType="bool" updates="constant" name="italic"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="1.0" valType="num" updates="constant" name="lineSpacing"/>
+        <Param val="judgement_exp" valType="code" updates="None" name="name"/>
+        <Param val="0.5" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="0" valType="num" updates="constant" name="padding"/>
+        <Param val="(0, -0.9)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="(0.15, 0.1)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="" valType="str" updates="constant" name="text"/>
+        <Param val="norm" valType="str" updates="None" name="units"/>
+      </TextboxComponent>
+      <CodeComponent name="code_exp">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="modify = false;&amp;#10;judgement_exp.text = &quot;&quot;;&amp;#10;psychoJS.eventManager.clearEvents(&quot;keyboard&quot;);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="modify = False&amp;#10;judgement_exp.text = ''&amp;#10;event.clearEvents('keyboard')" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="keys = event.getKeys(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'return', 'backspace'])&amp;#10;&amp;#10;if len(keys):&amp;#10;    if 'backspace' in keys:&amp;#10;        judgement_exp.text = judgement_exp.text[:-1]&amp;#10;    elif 'return' in keys and judgement_exp.text != '':&amp;#10;        continueRoutine = False&amp;#10;    elif 'return' in keys and judgement_exp.text == '':&amp;#10;        pass&amp;#10;    else:&amp;#10;        judgement_exp.text = judgement_exp.text + keys[0]" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;keys = psychoJS.eventManager.getKeys([&quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;0&quot;, &quot;return&quot;, &quot;backspace&quot;]);&amp;#10;if (keys.length) {&amp;#10;    if (_pj.in_es6(&quot;backspace&quot;, keys)) {&amp;#10;        judgement_exp.text = judgement_exp.text.slice(0, (- 1));&amp;#10;    } else {&amp;#10;        if ((_pj.in_es6(&quot;return&quot;, keys) &amp;&amp; (judgement_exp.text !== &quot;&quot;))) {&amp;#10;            continueRoutine = false;&amp;#10;        } else {&amp;#10;            if ((_pj.in_es6(&quot;return&quot;, keys) &amp;&amp; (judgement_exp.text === &quot;&quot;))) {&amp;#10;            } else {&amp;#10;                judgement_exp.text = (judgement_exp.text + keys[0]);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="psychoJS.experiment.addData(&quot;answer&quot;, judgement_exp.text);&amp;#10;psychoJS.experiment.addData(&quot;RT&quot;, t);&amp;#10;psychoJS.experiment.addData(&quot;looker_gender&quot;, looker[0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="thisExp.addData(&quot;answer&quot;, judgement_exp.text)&amp;#10;thisExp.addData(&quot;RT&quot;, t)&amp;#10;thisExp.addData(&quot;looker_gender&quot;, looker[0])" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code_exp" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="end_screen">
+      <TextComponent name="text">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="10" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Vielen Dank für Ihre Teilnahme.&amp;#10;&amp;#10;Bitte melden Sie sich bei dem:der Versuchsleiter:in." valType="str" updates="constant" name="text"/>
+        <Param val="norm" valType="str" updates="None" name="units"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="ITI_Training">
+      <TextComponent name="text_iti_train">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="0.5" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="text_iti_train" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="$d_iti" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <NoiseStimComponent name="noise">
+        <Param val="add" valType="str" updates="constant" name="blendmode"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1.0" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="filter"/>
+        <Param val="Phase" valType="str" updates="constant" name="imageComponent"/>
+        <Param val="nearest" valType="str" updates="constant" name="interpolate"/>
+        <Param val="None" valType="str" updates="constant" name="mask"/>
+        <Param val="noise" valType="code" updates="None" name="name"/>
+        <Param val="1" valType="num" updates="constant" name="noiseBW"/>
+        <Param val="30" valType="num" updates="constant" name="noiseBWO"/>
+        <Param val="8.0" valType="num" updates="constant" name="noiseBaseSf"/>
+        <Param val="3.0" valType="num" updates="constant" name="noiseClip"/>
+        <Param val="0.0625" valType="list" updates="constant" name="noiseElementSize"/>
+        <Param val="1.0" valType="num" updates="constant" name="noiseFilterLower"/>
+        <Param val="0.0" valType="num" updates="constant" name="noiseFilterOrder"/>
+        <Param val="8.0" valType="num" updates="constant" name="noiseFilterUpper"/>
+        <Param val="0.0" valType="num" updates="constant" name="noiseFractalPower"/>
+        <Param val="None" valType="file" updates="constant" name="noiseImage"/>
+        <Param val="N-frames" valType="str" updates="constant" name="noiseNewSample"/>
+        <Param val="1" valType="num" updates="constant" name="noiseNewSampleWhen"/>
+        <Param val="0.0" valType="num" updates="constant" name="noiseOri"/>
+        <Param val="White" valType="str" updates="constant" name="noiseType"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="0.0" valType="code" updates="constant" name="phase"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="None" valType="num" updates="constant" name="sf"/>
+        <Param val="(2, 2)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="$d_iti" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="int" updates="constant" name="texture resolution"/>
+        <Param val="norm" valType="str" updates="None" name="units"/>
+      </NoiseStimComponent>
+    </Routine>
+    <Routine name="ITI_Exp">
+      <TextComponent name="text_iti_exp">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="0.5" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="text_iti_exp" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="$d_iti" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="instructions_start"/>
+    <Routine name="instructions_training"/>
+    <LoopInitiator loopType="TrialHandler" name="trials_training">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_train\\F02_00.JPG', 'img_rel_path': 'img_train\\F02_00.JPG', 'looker': 'F02', 'visAng': 0.0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_train\\F02_01.JPG', 'img_rel_path': 'img_train\\F02_01.JPG', 'looker': 'F02', 'visAng': 1.0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_train\\F02_02.JPG', 'img_rel_path': 'img_train\\F02_02.JPG', 'looker': 'F02', 'visAng': 2.0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_train\\F02_03.JPG', 'img_rel_path': 'img_train\\F02_03.JPG', 'looker': 'F02', 'visAng': 3.0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_train\\F02_04.JPG', 'img_rel_path': 'img_train\\F02_04.JPG', 'looker': 'F02', 'visAng': 4.0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_train\\F02_05.JPG', 'img_rel_path': 'img_train\\F02_05.JPG', 'looker': 'F02', 'visAng': 5.0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_train\\F02_06.JPG', 'img_rel_path': 'img_train\\F02_06.JPG', 'looker': 'F02', 'visAng': 6.0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_train\\F02_07.JPG', 'img_rel_path': 'img_train\\F02_07.JPG', 'looker': 'F02', 'visAng': 7.0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_train\\F02_08.JPG', 'img_rel_path': 'img_train\\F02_08.JPG', 'looker': 'F02', 'visAng': 8.0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_train\\F02_09.JPG', 'img_rel_path': 'img_train\\F02_09.JPG', 'looker': 'F02', 'visAng': 9.0}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="cond_training.xlsx" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="fullRandom" valType="str"/>
+      <Param name="nReps" updates="None" val="2" valType="num"/>
+      <Param name="name" updates="None" val="trials_training" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="ITI_Training"/>
+    <Routine name="training"/>
+    <LoopTerminator name="trials_training"/>
+    <Routine name="instructions_exp"/>
+    <LoopInitiator loopType="TrialHandler" name="trials_exp">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F01_00.jpg', 'img_rel_path': 'img_exp\\F01_00.jpg', 'looker': 'F01', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F01_02.jpg', 'img_rel_path': 'img_exp\\F01_02.jpg', 'looker': 'F01', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F01_04.jpg', 'img_rel_path': 'img_exp\\F01_04.jpg', 'looker': 'F01', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F01_06.jpg', 'img_rel_path': 'img_exp\\F01_06.jpg', 'looker': 'F01', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F01_08.jpg', 'img_rel_path': 'img_exp\\F01_08.jpg', 'looker': 'F01', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F01_12.jpg', 'img_rel_path': 'img_exp\\F01_12.jpg', 'looker': 'F01', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F02_00.jpg', 'img_rel_path': 'img_exp\\F02_00.jpg', 'looker': 'F02', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F02_02.jpg', 'img_rel_path': 'img_exp\\F02_02.jpg', 'looker': 'F02', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F02_04.jpg', 'img_rel_path': 'img_exp\\F02_04.jpg', 'looker': 'F02', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F02_06.jpg', 'img_rel_path': 'img_exp\\F02_06.jpg', 'looker': 'F02', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F02_08.jpg', 'img_rel_path': 'img_exp\\F02_08.jpg', 'looker': 'F02', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F02_12.jpg', 'img_rel_path': 'img_exp\\F02_12.jpg', 'looker': 'F02', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F03_00.jpg', 'img_rel_path': 'img_exp\\F03_00.jpg', 'looker': 'F03', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F03_02.jpg', 'img_rel_path': 'img_exp\\F03_02.jpg', 'looker': 'F03', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F03_04.jpg', 'img_rel_path': 'img_exp\\F03_04.jpg', 'looker': 'F03', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F03_06.jpg', 'img_rel_path': 'img_exp\\F03_06.jpg', 'looker': 'F03', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F03_08.jpg', 'img_rel_path': 'img_exp\\F03_08.jpg', 'looker': 'F03', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F03_12.jpg', 'img_rel_path': 'img_exp\\F03_12.jpg', 'looker': 'F03', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F04_00.jpg', 'img_rel_path': 'img_exp\\F04_00.jpg', 'looker': 'F04', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F04_02.jpg', 'img_rel_path': 'img_exp\\F04_02.jpg', 'looker': 'F04', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F04_04.jpg', 'img_rel_path': 'img_exp\\F04_04.jpg', 'looker': 'F04', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F04_06.jpg', 'img_rel_path': 'img_exp\\F04_06.jpg', 'looker': 'F04', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F04_08.jpg', 'img_rel_path': 'img_exp\\F04_08.jpg', 'looker': 'F04', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F04_12.jpg', 'img_rel_path': 'img_exp\\F04_12.jpg', 'looker': 'F04', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F05_00.jpg', 'img_rel_path': 'img_exp\\F05_00.jpg', 'looker': 'F05', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F05_02.jpg', 'img_rel_path': 'img_exp\\F05_02.jpg', 'looker': 'F05', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F05_04.jpg', 'img_rel_path': 'img_exp\\F05_04.jpg', 'looker': 'F05', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F05_06.jpg', 'img_rel_path': 'img_exp\\F05_06.jpg', 'looker': 'F05', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F05_08.jpg', 'img_rel_path': 'img_exp\\F05_08.jpg', 'looker': 'F05', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F05_12.jpg', 'img_rel_path': 'img_exp\\F05_12.jpg', 'looker': 'F05', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F07_00.jpg', 'img_rel_path': 'img_exp\\F07_00.jpg', 'looker': 'F07', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F07_02.jpg', 'img_rel_path': 'img_exp\\F07_02.jpg', 'looker': 'F07', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F07_04.jpg', 'img_rel_path': 'img_exp\\F07_04.jpg', 'looker': 'F07', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F07_06.jpg', 'img_rel_path': 'img_exp\\F07_06.jpg', 'looker': 'F07', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F07_08.jpg', 'img_rel_path': 'img_exp\\F07_08.jpg', 'looker': 'F07', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F07_12.jpg', 'img_rel_path': 'img_exp\\F07_12.jpg', 'looker': 'F07', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F08_00.jpg', 'img_rel_path': 'img_exp\\F08_00.jpg', 'looker': 'F08', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F08_02.jpg', 'img_rel_path': 'img_exp\\F08_02.jpg', 'looker': 'F08', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F08_04.jpg', 'img_rel_path': 'img_exp\\F08_04.jpg', 'looker': 'F08', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F08_06.jpg', 'img_rel_path': 'img_exp\\F08_06.jpg', 'looker': 'F08', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F08_08.jpg', 'img_rel_path': 'img_exp\\F08_08.jpg', 'looker': 'F08', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F08_12.jpg', 'img_rel_path': 'img_exp\\F08_12.jpg', 'looker': 'F08', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F09_00.jpg', 'img_rel_path': 'img_exp\\F09_00.jpg', 'looker': 'F09', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F09_02.jpg', 'img_rel_path': 'img_exp\\F09_02.jpg', 'looker': 'F09', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F09_04.jpg', 'img_rel_path': 'img_exp\\F09_04.jpg', 'looker': 'F09', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F09_06.jpg', 'img_rel_path': 'img_exp\\F09_06.jpg', 'looker': 'F09', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F09_08.jpg', 'img_rel_path': 'img_exp\\F09_08.jpg', 'looker': 'F09', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F09_12.jpg', 'img_rel_path': 'img_exp\\F09_12.jpg', 'looker': 'F09', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F10_00.jpg', 'img_rel_path': 'img_exp\\F10_00.jpg', 'looker': 'F10', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F10_02.jpg', 'img_rel_path': 'img_exp\\F10_02.jpg', 'looker': 'F10', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F10_04.jpg', 'img_rel_path': 'img_exp\\F10_04.jpg', 'looker': 'F10', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F10_06.jpg', 'img_rel_path': 'img_exp\\F10_06.jpg', 'looker': 'F10', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F10_08.jpg', 'img_rel_path': 'img_exp\\F10_08.jpg', 'looker': 'F10', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F10_12.jpg', 'img_rel_path': 'img_exp\\F10_12.jpg', 'looker': 'F10', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F11_00.jpg', 'img_rel_path': 'img_exp\\F11_00.jpg', 'looker': 'F11', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F11_02.jpg', 'img_rel_path': 'img_exp\\F11_02.jpg', 'looker': 'F11', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F11_04.jpg', 'img_rel_path': 'img_exp\\F11_04.jpg', 'looker': 'F11', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F11_06.jpg', 'img_rel_path': 'img_exp\\F11_06.jpg', 'looker': 'F11', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F11_08.jpg', 'img_rel_path': 'img_exp\\F11_08.jpg', 'looker': 'F11', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F11_12.jpg', 'img_rel_path': 'img_exp\\F11_12.jpg', 'looker': 'F11', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F12_00.jpg', 'img_rel_path': 'img_exp\\F12_00.jpg', 'looker': 'F12', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F12_02.jpg', 'img_rel_path': 'img_exp\\F12_02.jpg', 'looker': 'F12', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F12_04.jpg', 'img_rel_path': 'img_exp\\F12_04.jpg', 'looker': 'F12', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F12_06.jpg', 'img_rel_path': 'img_exp\\F12_06.jpg', 'looker': 'F12', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F12_08.jpg', 'img_rel_path': 'img_exp\\F12_08.jpg', 'looker': 'F12', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F12_12.jpg', 'img_rel_path': 'img_exp\\F12_12.jpg', 'looker': 'F12', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F13_00.jpg', 'img_rel_path': 'img_exp\\F13_00.jpg', 'looker': 'F13', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F13_02.jpg', 'img_rel_path': 'img_exp\\F13_02.jpg', 'looker': 'F13', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F13_04.jpg', 'img_rel_path': 'img_exp\\F13_04.jpg', 'looker': 'F13', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F13_06.jpg', 'img_rel_path': 'img_exp\\F13_06.jpg', 'looker': 'F13', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F13_08.jpg', 'img_rel_path': 'img_exp\\F13_08.jpg', 'looker': 'F13', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F13_12.jpg', 'img_rel_path': 'img_exp\\F13_12.jpg', 'looker': 'F13', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F14_00.jpg', 'img_rel_path': 'img_exp\\F14_00.jpg', 'looker': 'F14', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F14_02.jpg', 'img_rel_path': 'img_exp\\F14_02.jpg', 'looker': 'F14', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F14_04.jpg', 'img_rel_path': 'img_exp\\F14_04.jpg', 'looker': 'F14', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F14_06.jpg', 'img_rel_path': 'img_exp\\F14_06.jpg', 'looker': 'F14', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F14_08.jpg', 'img_rel_path': 'img_exp\\F14_08.jpg', 'looker': 'F14', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F14_12.jpg', 'img_rel_path': 'img_exp\\F14_12.jpg', 'looker': 'F14', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F15_00.jpg', 'img_rel_path': 'img_exp\\F15_00.jpg', 'looker': 'F15', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F15_02.jpg', 'img_rel_path': 'img_exp\\F15_02.jpg', 'looker': 'F15', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F15_04.jpg', 'img_rel_path': 'img_exp\\F15_04.jpg', 'looker': 'F15', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F15_06.jpg', 'img_rel_path': 'img_exp\\F15_06.jpg', 'looker': 'F15', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F15_08.jpg', 'img_rel_path': 'img_exp\\F15_08.jpg', 'looker': 'F15', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F15_12.jpg', 'img_rel_path': 'img_exp\\F15_12.jpg', 'looker': 'F15', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F16_00.jpg', 'img_rel_path': 'img_exp\\F16_00.jpg', 'looker': 'F16', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F16_02.jpg', 'img_rel_path': 'img_exp\\F16_02.jpg', 'looker': 'F16', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F16_04.jpg', 'img_rel_path': 'img_exp\\F16_04.jpg', 'looker': 'F16', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F16_06.jpg', 'img_rel_path': 'img_exp\\F16_06.jpg', 'looker': 'F16', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F16_08.jpg', 'img_rel_path': 'img_exp\\F16_08.jpg', 'looker': 'F16', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F16_12.jpg', 'img_rel_path': 'img_exp\\F16_12.jpg', 'looker': 'F16', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F17_00.jpg', 'img_rel_path': 'img_exp\\F17_00.jpg', 'looker': 'F17', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F17_02.jpg', 'img_rel_path': 'img_exp\\F17_02.jpg', 'looker': 'F17', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F17_04.jpg', 'img_rel_path': 'img_exp\\F17_04.jpg', 'looker': 'F17', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F17_06.jpg', 'img_rel_path': 'img_exp\\F17_06.jpg', 'looker': 'F17', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F17_08.jpg', 'img_rel_path': 'img_exp\\F17_08.jpg', 'looker': 'F17', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F17_12.jpg', 'img_rel_path': 'img_exp\\F17_12.jpg', 'looker': 'F17', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F18_00.jpg', 'img_rel_path': 'img_exp\\F18_00.jpg', 'looker': 'F18', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F18_02.jpg', 'img_rel_path': 'img_exp\\F18_02.jpg', 'looker': 'F18', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F18_04.jpg', 'img_rel_path': 'img_exp\\F18_04.jpg', 'looker': 'F18', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F18_06.jpg', 'img_rel_path': 'img_exp\\F18_06.jpg', 'looker': 'F18', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F18_08.jpg', 'img_rel_path': 'img_exp\\F18_08.jpg', 'looker': 'F18', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F18_12.jpg', 'img_rel_path': 'img_exp\\F18_12.jpg', 'looker': 'F18', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F19_00.jpg', 'img_rel_path': 'img_exp\\F19_00.jpg', 'looker': 'F19', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F19_02.jpg', 'img_rel_path': 'img_exp\\F19_02.jpg', 'looker': 'F19', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F19_04.jpg', 'img_rel_path': 'img_exp\\F19_04.jpg', 'looker': 'F19', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F19_06.jpg', 'img_rel_path': 'img_exp\\F19_06.jpg', 'looker': 'F19', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F19_08.jpg', 'img_rel_path': 'img_exp\\F19_08.jpg', 'looker': 'F19', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F19_12.jpg', 'img_rel_path': 'img_exp\\F19_12.jpg', 'looker': 'F19', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F20_00.jpg', 'img_rel_path': 'img_exp\\F20_00.jpg', 'looker': 'F20', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F20_02.jpg', 'img_rel_path': 'img_exp\\F20_02.jpg', 'looker': 'F20', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F20_04.jpg', 'img_rel_path': 'img_exp\\F20_04.jpg', 'looker': 'F20', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F20_06.jpg', 'img_rel_path': 'img_exp\\F20_06.jpg', 'looker': 'F20', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F20_08.jpg', 'img_rel_path': 'img_exp\\F20_08.jpg', 'looker': 'F20', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F20_12.jpg', 'img_rel_path': 'img_exp\\F20_12.jpg', 'looker': 'F20', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F21_00.jpg', 'img_rel_path': 'img_exp\\F21_00.jpg', 'looker': 'F21', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F21_02.jpg', 'img_rel_path': 'img_exp\\F21_02.jpg', 'looker': 'F21', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F21_04.jpg', 'img_rel_path': 'img_exp\\F21_04.jpg', 'looker': 'F21', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F21_06.jpg', 'img_rel_path': 'img_exp\\F21_06.jpg', 'looker': 'F21', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F21_08.jpg', 'img_rel_path': 'img_exp\\F21_08.jpg', 'looker': 'F21', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F21_12.jpg', 'img_rel_path': 'img_exp\\F21_12.jpg', 'looker': 'F21', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F22_00.jpg', 'img_rel_path': 'img_exp\\F22_00.jpg', 'looker': 'F22', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F22_02.jpg', 'img_rel_path': 'img_exp\\F22_02.jpg', 'looker': 'F22', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F22_04.jpg', 'img_rel_path': 'img_exp\\F22_04.jpg', 'looker': 'F22', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F22_06.jpg', 'img_rel_path': 'img_exp\\F22_06.jpg', 'looker': 'F22', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F22_08.jpg', 'img_rel_path': 'img_exp\\F22_08.jpg', 'looker': 'F22', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F22_12.jpg', 'img_rel_path': 'img_exp\\F22_12.jpg', 'looker': 'F22', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F23_00.jpg', 'img_rel_path': 'img_exp\\F23_00.jpg', 'looker': 'F23', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F23_02.jpg', 'img_rel_path': 'img_exp\\F23_02.jpg', 'looker': 'F23', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F23_04.jpg', 'img_rel_path': 'img_exp\\F23_04.jpg', 'looker': 'F23', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F23_06.jpg', 'img_rel_path': 'img_exp\\F23_06.jpg', 'looker': 'F23', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F23_08.jpg', 'img_rel_path': 'img_exp\\F23_08.jpg', 'looker': 'F23', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F23_12.jpg', 'img_rel_path': 'img_exp\\F23_12.jpg', 'looker': 'F23', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F24_00.jpg', 'img_rel_path': 'img_exp\\F24_00.jpg', 'looker': 'F24', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F24_02.jpg', 'img_rel_path': 'img_exp\\F24_02.jpg', 'looker': 'F24', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F24_04.jpg', 'img_rel_path': 'img_exp\\F24_04.jpg', 'looker': 'F24', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F24_06.jpg', 'img_rel_path': 'img_exp\\F24_06.jpg', 'looker': 'F24', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F24_08.jpg', 'img_rel_path': 'img_exp\\F24_08.jpg', 'looker': 'F24', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F24_12.jpg', 'img_rel_path': 'img_exp\\F24_12.jpg', 'looker': 'F24', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F25_00.jpg', 'img_rel_path': 'img_exp\\F25_00.jpg', 'looker': 'F25', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F25_02.jpg', 'img_rel_path': 'img_exp\\F25_02.jpg', 'looker': 'F25', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F25_04.jpg', 'img_rel_path': 'img_exp\\F25_04.jpg', 'looker': 'F25', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F25_06.jpg', 'img_rel_path': 'img_exp\\F25_06.jpg', 'looker': 'F25', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F25_08.jpg', 'img_rel_path': 'img_exp\\F25_08.jpg', 'looker': 'F25', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F25_12.jpg', 'img_rel_path': 'img_exp\\F25_12.jpg', 'looker': 'F25', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F26_00.jpg', 'img_rel_path': 'img_exp\\F26_00.jpg', 'looker': 'F26', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F26_02.jpg', 'img_rel_path': 'img_exp\\F26_02.jpg', 'looker': 'F26', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F26_04.jpg', 'img_rel_path': 'img_exp\\F26_04.jpg', 'looker': 'F26', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F26_06.jpg', 'img_rel_path': 'img_exp\\F26_06.jpg', 'looker': 'F26', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F26_08.jpg', 'img_rel_path': 'img_exp\\F26_08.jpg', 'looker': 'F26', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F26_12.jpg', 'img_rel_path': 'img_exp\\F26_12.jpg', 'looker': 'F26', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F28_00.jpg', 'img_rel_path': 'img_exp\\F28_00.jpg', 'looker': 'F28', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F28_02.jpg', 'img_rel_path': 'img_exp\\F28_02.jpg', 'looker': 'F28', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F28_04.jpg', 'img_rel_path': 'img_exp\\F28_04.jpg', 'looker': 'F28', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F28_06.jpg', 'img_rel_path': 'img_exp\\F28_06.jpg', 'looker': 'F28', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F28_08.jpg', 'img_rel_path': 'img_exp\\F28_08.jpg', 'looker': 'F28', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\F28_12.jpg', 'img_rel_path': 'img_exp\\F28_12.jpg', 'looker': 'F28', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M01_00.jpg', 'img_rel_path': 'img_exp\\M01_00.jpg', 'looker': 'M01', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M01_02.jpg', 'img_rel_path': 'img_exp\\M01_02.jpg', 'looker': 'M01', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M01_04.jpg', 'img_rel_path': 'img_exp\\M01_04.jpg', 'looker': 'M01', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M01_06.jpg', 'img_rel_path': 'img_exp\\M01_06.jpg', 'looker': 'M01', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M01_08.jpg', 'img_rel_path': 'img_exp\\M01_08.jpg', 'looker': 'M01', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M01_12.jpg', 'img_rel_path': 'img_exp\\M01_12.jpg', 'looker': 'M01', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M02_00.jpg', 'img_rel_path': 'img_exp\\M02_00.jpg', 'looker': 'M02', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M02_02.jpg', 'img_rel_path': 'img_exp\\M02_02.jpg', 'looker': 'M02', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M02_04.jpg', 'img_rel_path': 'img_exp\\M02_04.jpg', 'looker': 'M02', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M02_06.jpg', 'img_rel_path': 'img_exp\\M02_06.jpg', 'looker': 'M02', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M02_08.jpg', 'img_rel_path': 'img_exp\\M02_08.jpg', 'looker': 'M02', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M02_12.jpg', 'img_rel_path': 'img_exp\\M02_12.jpg', 'looker': 'M02', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M03_00.jpg', 'img_rel_path': 'img_exp\\M03_00.jpg', 'looker': 'M03', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M03_02.jpg', 'img_rel_path': 'img_exp\\M03_02.jpg', 'looker': 'M03', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M03_04.jpg', 'img_rel_path': 'img_exp\\M03_04.jpg', 'looker': 'M03', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M03_06.jpg', 'img_rel_path': 'img_exp\\M03_06.jpg', 'looker': 'M03', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M03_08.jpg', 'img_rel_path': 'img_exp\\M03_08.jpg', 'looker': 'M03', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M03_12.jpg', 'img_rel_path': 'img_exp\\M03_12.jpg', 'looker': 'M03', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M04_00.jpg', 'img_rel_path': 'img_exp\\M04_00.jpg', 'looker': 'M04', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M04_02.jpg', 'img_rel_path': 'img_exp\\M04_02.jpg', 'looker': 'M04', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M04_04.jpg', 'img_rel_path': 'img_exp\\M04_04.jpg', 'looker': 'M04', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M04_06.jpg', 'img_rel_path': 'img_exp\\M04_06.jpg', 'looker': 'M04', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M04_08.jpg', 'img_rel_path': 'img_exp\\M04_08.jpg', 'looker': 'M04', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M04_12.jpg', 'img_rel_path': 'img_exp\\M04_12.jpg', 'looker': 'M04', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M05_00.jpg', 'img_rel_path': 'img_exp\\M05_00.jpg', 'looker': 'M05', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M05_02.jpg', 'img_rel_path': 'img_exp\\M05_02.jpg', 'looker': 'M05', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M05_04.jpg', 'img_rel_path': 'img_exp\\M05_04.jpg', 'looker': 'M05', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M05_06.jpg', 'img_rel_path': 'img_exp\\M05_06.jpg', 'looker': 'M05', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M05_08.jpg', 'img_rel_path': 'img_exp\\M05_08.jpg', 'looker': 'M05', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M05_12.jpg', 'img_rel_path': 'img_exp\\M05_12.jpg', 'looker': 'M05', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M06_00.jpg', 'img_rel_path': 'img_exp\\M06_00.jpg', 'looker': 'M06', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M06_02.jpg', 'img_rel_path': 'img_exp\\M06_02.jpg', 'looker': 'M06', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M06_04.jpg', 'img_rel_path': 'img_exp\\M06_04.jpg', 'looker': 'M06', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M06_06.jpg', 'img_rel_path': 'img_exp\\M06_06.jpg', 'looker': 'M06', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M06_08.jpg', 'img_rel_path': 'img_exp\\M06_08.jpg', 'looker': 'M06', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M06_12.jpg', 'img_rel_path': 'img_exp\\M06_12.jpg', 'looker': 'M06', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M07_00.jpg', 'img_rel_path': 'img_exp\\M07_00.jpg', 'looker': 'M07', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M07_02.jpg', 'img_rel_path': 'img_exp\\M07_02.jpg', 'looker': 'M07', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M07_04.jpg', 'img_rel_path': 'img_exp\\M07_04.jpg', 'looker': 'M07', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M07_06.jpg', 'img_rel_path': 'img_exp\\M07_06.jpg', 'looker': 'M07', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M07_08.jpg', 'img_rel_path': 'img_exp\\M07_08.jpg', 'looker': 'M07', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M07_12.jpg', 'img_rel_path': 'img_exp\\M07_12.jpg', 'looker': 'M07', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M08_00.jpg', 'img_rel_path': 'img_exp\\M08_00.jpg', 'looker': 'M08', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M08_02.jpg', 'img_rel_path': 'img_exp\\M08_02.jpg', 'looker': 'M08', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M08_04.jpg', 'img_rel_path': 'img_exp\\M08_04.jpg', 'looker': 'M08', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M08_06.jpg', 'img_rel_path': 'img_exp\\M08_06.jpg', 'looker': 'M08', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M08_08.jpg', 'img_rel_path': 'img_exp\\M08_08.jpg', 'looker': 'M08', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M08_12.jpg', 'img_rel_path': 'img_exp\\M08_12.jpg', 'looker': 'M08', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M09_00.jpg', 'img_rel_path': 'img_exp\\M09_00.jpg', 'looker': 'M09', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M09_02.jpg', 'img_rel_path': 'img_exp\\M09_02.jpg', 'looker': 'M09', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M09_04.jpg', 'img_rel_path': 'img_exp\\M09_04.jpg', 'looker': 'M09', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M09_06.jpg', 'img_rel_path': 'img_exp\\M09_06.jpg', 'looker': 'M09', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M09_08.jpg', 'img_rel_path': 'img_exp\\M09_08.jpg', 'looker': 'M09', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M09_12.jpg', 'img_rel_path': 'img_exp\\M09_12.jpg', 'looker': 'M09', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M10_00.jpg', 'img_rel_path': 'img_exp\\M10_00.jpg', 'looker': 'M10', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M10_02.jpg', 'img_rel_path': 'img_exp\\M10_02.jpg', 'looker': 'M10', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M10_04.jpg', 'img_rel_path': 'img_exp\\M10_04.jpg', 'looker': 'M10', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M10_06.jpg', 'img_rel_path': 'img_exp\\M10_06.jpg', 'looker': 'M10', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M10_08.jpg', 'img_rel_path': 'img_exp\\M10_08.jpg', 'looker': 'M10', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M10_12.jpg', 'img_rel_path': 'img_exp\\M10_12.jpg', 'looker': 'M10', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M11_00.jpg', 'img_rel_path': 'img_exp\\M11_00.jpg', 'looker': 'M11', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M11_02.jpg', 'img_rel_path': 'img_exp\\M11_02.jpg', 'looker': 'M11', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M11_04.jpg', 'img_rel_path': 'img_exp\\M11_04.jpg', 'looker': 'M11', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M11_06.jpg', 'img_rel_path': 'img_exp\\M11_06.jpg', 'looker': 'M11', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M11_08.jpg', 'img_rel_path': 'img_exp\\M11_08.jpg', 'looker': 'M11', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M11_12.jpg', 'img_rel_path': 'img_exp\\M11_12.jpg', 'looker': 'M11', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M12_00.jpg', 'img_rel_path': 'img_exp\\M12_00.jpg', 'looker': 'M12', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M12_02.jpg', 'img_rel_path': 'img_exp\\M12_02.jpg', 'looker': 'M12', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M12_04.jpg', 'img_rel_path': 'img_exp\\M12_04.jpg', 'looker': 'M12', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M12_06.jpg', 'img_rel_path': 'img_exp\\M12_06.jpg', 'looker': 'M12', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M12_08.jpg', 'img_rel_path': 'img_exp\\M12_08.jpg', 'looker': 'M12', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M12_12.jpg', 'img_rel_path': 'img_exp\\M12_12.jpg', 'looker': 'M12', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M13_00.jpg', 'img_rel_path': 'img_exp\\M13_00.jpg', 'looker': 'M13', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M13_02.jpg', 'img_rel_path': 'img_exp\\M13_02.jpg', 'looker': 'M13', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M13_04.jpg', 'img_rel_path': 'img_exp\\M13_04.jpg', 'looker': 'M13', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M13_06.jpg', 'img_rel_path': 'img_exp\\M13_06.jpg', 'looker': 'M13', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M13_08.jpg', 'img_rel_path': 'img_exp\\M13_08.jpg', 'looker': 'M13', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M13_12.jpg', 'img_rel_path': 'img_exp\\M13_12.jpg', 'looker': 'M13', 'visAng': 12, 'visAngCorr': 13.3}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M14_00.jpg', 'img_rel_path': 'img_exp\\M14_00.jpg', 'looker': 'M14', 'visAng': 0, 'visAngCorr': 0}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M14_02.jpg', 'img_rel_path': 'img_exp\\M14_02.jpg', 'looker': 'M14', 'visAng': 2, 'visAngCorr': 2.2}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M14_04.jpg', 'img_rel_path': 'img_exp\\M14_04.jpg', 'looker': 'M14', 'visAng': 4, 'visAngCorr': 4.4}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M14_06.jpg', 'img_rel_path': 'img_exp\\M14_06.jpg', 'looker': 'M14', 'visAng': 6, 'visAngCorr': 6.6}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M14_08.jpg', 'img_rel_path': 'img_exp\\M14_08.jpg', 'looker': 'M14', 'visAng': 8, 'visAngCorr': 8.8}, {'img_path': 'C:\\Users\\calti\\Documents\\Masterarbeit\\PsychoPy\\img_exp\\M14_12.jpg', 'img_rel_path': 'img_exp\\M14_12.jpg', 'looker': 'M14', 'visAng': 12, 'visAngCorr': 13.3}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="cond_exp.xlsx" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="fullRandom" valType="str"/>
+      <Param name="nReps" updates="None" val="6" valType="num"/>
+      <Param name="name" updates="None" val="trials_exp" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="ITI_Exp"/>
+    <Routine name="experiment"/>
+    <LoopTerminator name="trials_exp"/>
+    <Routine name="end_screen"/>
+  </Flow>
+</PsychoPy2experiment>
